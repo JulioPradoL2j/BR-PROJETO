@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<config />
+	<!-- 
+		serverId: The true id of the gameserver
+		hide: When enabled, the true gameserver will not appear in the server list
+		fallbackToGameserver: When the proxy server is down, when true, the real gameserver will appear
+		proxyServerId: The gameserver id that the proxy will use to be listed in the server list
+		proxyHost: The host of the proxy
+		proxyPort: The port of the proxy
+		apiPort: The port of the API for the proxy
+		apiKey: The api key for the proxy api
+	-->
+	<gameserver serverId="1" hide="true" fallbackToGameserver="false">
+		<proxy proxyServerId="2" proxyHost="127.0.0.1" proxyPort="7778" validateHealth="true" apiPort="6969" apiKey="changeit"/>
+		<proxy proxyServerId="3" proxyHost="127.0.0.1" proxyPort="7779" validateHealth="true" apiPort="6969" apiKey="changeit"/>
+	</gameserver>
+</list>

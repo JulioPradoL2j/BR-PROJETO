@@ -1,0 +1,39 @@
+<html><body>
+<center>
+<table width=300>
+<tr>
+	<td><center><font color="LEVEL">Fake Player Dashboard</font></center></td>
+</tr>
+</table>
+<br>
+<table width=300>
+<tr>
+	<td><center>Fake player count: <font color="LEVEL">%fakecount%</font></center></td>
+</tr>
+<tr>
+	<td><center>AI Tasks running: <font color="LEVEL">%taskcount%</font></center></td>
+</tr>
+</table>
+<br>
+
+<table width=150>
+<tr>
+	<td><button value="Spawn Fake" action="bypass -h admin_spawnrandom" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	<td><button value="Spawn Party" action="bypass -h admin_spawnrandomgrupe" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+
+<br><br>
+<table width=300>
+<tr>
+	<td><center><font color="LEVEL">Buscar FakePlayer por nome:</font></center></td>
+	<td><edit var="fakename" width=55></td>
+		<td><button value="Procurar" action="bypass -h admin_findfake $fakename" width=80 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+</tr>
+</table>
+<br>
+%list%
+<br>
+%pages%
+</center>
+</body></html>

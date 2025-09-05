@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+ <!--
+    ===============================
+    CONFIGURAÇÃO DO BOT DO DISCORD
+    ===============================
+
+    Para adicionar o bot no seu servidor do Discord:
+        1. Pegue o "client_id" do bot no portal de desenvolvedores.
+        2. Substitua no link abaixo e acesse no navegador:
+           https://discord.com/oauth2/authorize?client_id=1404305511540850841&scope=bot&permissions=2048
+
+    botToken:
+        - Token do seu bot do Discord.
+        - Obtenha no portal de desenvolvedores: https://discord.com/developers/applications
+        - IMPORTANTE: Nunca compartilhe publicamente.
+
+    channel:
+        - ID do canal onde as mensagens serão enviadas.
+        - Ative o "Modo Desenvolvedor" no Discord.
+        - Clique com o botão direito no canal e selecione "Copiar ID".
+
+    npcIds:
+        - Lista de IDs de NPCs (RaidBoss) para monitorar.
+        - Formato: IDs separados por vírgula, sem espaços. Ex.: "29001,29006,29014"
+        - Use "ALL" para monitorar todos.
+
+    raidBossKill:
+        - Mensagem quando o RaidBoss morre.
+        - Placeholders:
+            %s = Nome do RaidBoss
+            %s = Nome do player que matou
+            %s = Informação extra (ex.: nome do clan)
+        - Exemplo:
+            💀 O RaidBoss **Queen Ant** foi morto pelo player **DarkLord** do clan **Rebels**!
+
+    raidBossSpawn:
+        - Mensagem quando o RaidBoss renasce.
+        - Placeholders:
+            %s = Nome do RaidBoss
+        - Exemplo:
+            💀 O RaidBoss Queen Ant está vivo novamente!
+
+    siegeRegisterAttacker:
+        - Mensagem quando um jogador se registra como atacante.
+        - Placeholders:
+            %s = Nome do jogador
+            %s = Nome do castelo
+
+    siegeRegisterDefender:
+        - Mensagem quando um jogador se registra como defensor.
+        - Placeholders:
+            %s = Nome do jogador
+            %s = Nome do castelo
+
+    siegeStart:
+        - Mensagem quando a siege começa.
+        - Placeholders:
+            %s = Nome do castelo
+
+    siegeEnd:
+        - Mensagem quando a siege termina.
+        - Placeholders:
+            %s = Nome do castelo
+-->
+<list>
+    <discord 
+		botToken="MTQwNDMwNTUxMTU0MDg1MDg0MQ.GfGgjX.NMfxFq0vRaElUY2P4OKAEtlF2Jg93AlztDGBVw"
+		npcIds="ALL"
+		raidBossKillChannel="1404872212191907900"
+        raidBossKill="💀 O RaidBoss **%s** foi morto pelo player **%s**%s!"
+
+        raidBossSpawnChannel="1404872212191907900"
+        raidBossSpawn="💀 O RaidBoss %s está vivo novamente!"
+
+        siegeRegisterAttackerChannel="1404315377822859396"
+        siegeRegisterAttacker="⚔️ O Clan **%s** registrou como atacante no castelo **%s**."
+
+        siegeRegisterDefenderChannel="1404315377822859396"
+        siegeRegisterDefender="🛡️ O Clan **%s** registrou como defensor no castelo **%s**."
+
+        siegeStartChannel="1404315377822859396"
+        siegeStart="🚨 A siege começou no castelo **%s**!"
+
+        siegeEndChannel="1404315377822859396"
+        siegeEnd="🏰 A siege terminou no castelo **%s**." 
+	/>
+</list>
+

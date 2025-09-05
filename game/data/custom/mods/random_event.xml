@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ramdoms>
+	<event>
+		<configs>
+			<config enable="true" name="[Farm Event]" prepareMinutes="2" intervalHours="1" select="1" days="0,1,2,3,4,5,6" times="18:05"/>
+		</configs>
+		
+		<messages>
+			<message onPrepare="O evento iniciado em %time%. Prepare sua party!"/>
+			
+			<message onZone=" >> Zona ATIVADA: %zone%"/>
+
+			<message onStart="O evento começou! Os monstros foram invocados!"/>
+			<message onStart="O evento terminará em %time% hora(s)."/>
+
+			<message onAuto="O evento de Farm Random termina em %dh %dm %ds!"/>
+			
+			<message onEnd="O evento terminou. Obrigado por participar!"/>
+			<message onEnd="O próximo evento será às %next_time%."/>
+		</messages>
+		
+		<spawns zoneId="1">
+			<spawn npcId="22126" countAndRange="8-75" x="-88055" y="142456" z="-3640" respawnDelay="35" drops="3470-1000-100;4037-3-5" />
+		</spawns>
+		
+		<spawns zoneId="2">
+			<spawn npcId="22126" countAndRange="5-75" x="73015" y="142404" z="-3768" respawnDelay="35" drops="3470-1000-100;4037-3-5" />
+		</spawns>
+	</event>
+</ramdoms>

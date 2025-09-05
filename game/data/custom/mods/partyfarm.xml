@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Configuração do evento Party Farm
+  Este evento ocorre em determinados dias e horários configurados abaixo.
+  Quando o horário for atingido, uma mensagem será enviada aos jogadores,
+  e os monstros serão invocados após o tempo de preparação definido.
+-->
+
+<partyfarm>
+    <event name="partyfarm">
+        <!-- Ativa ou desativa este evento -->
+        <enabled>true</enabled>
+
+        <!-- Duração total do evento em minutos (após o tempo de preparação) -->
+        <duration>55</duration>
+
+        <!-- Tempo de preparação em minutos após o aviso antes de iniciar o evento -->
+        <preparation>1</preparation>
+
+        <!-- Dias da semana em que o evento pode ocorrer:
+             0 = Domingo, 1 = Segunda, ..., 6 = Sábado.
+             Neste exemplo: Segunda (1), Quarta (3) e Sexta-feira (5) -->
+        <days>1,3,5</days>
+
+        <!-- Horários do dia em que o evento pode iniciar (formato 24h: HH:mm).
+             O sistema verifica a cada segundo se um desses horários foi atingido. -->
+        <times>
+            <time>22:15</time>
+            <time>15:00</time>
+            <time>17:20</time>
+            <time>21:15</time>
+        </times>
+        
+		<!-- 
+
+			Configurações da Party Zone (Zona de Farm em Grupo)
+	
+			- minMemberCount:
+			Número mínimo de membros necessários na party para entrar na zona.
+			Se for 0, qualquer jogador pode entrar individualmente, sem necessidade de estar em uma party.
+	
+			- HwidCheck:
+			Ativa ou desativa a verificação de jogadores com o mesmo HWID e IP dentro da zona.
+			true  = se outro jogador com o mesmo HWID/IP já estiver na zona, o novo será removido.
+			false = desativa a verificação; múltiplos personagens do mesmo HWID/IP poderão entrar.
+	
+			- punishFullPartyOnHwid:
+			Define o comportamento da punição quando for detectado um jogador duplicado (mesmo HWID/IP).
+			true  = toda a party do jogador será expulsa da zona.
+			false = apenas o jogador duplicado será expulso.
+		
+		-->
+         <settings>
+         	<setting minMemberCount="0" HwidCheck="false" punishFullPartyOnHwid="false" minMembersLevel="2" />
+         </settings>
+         
+		<messages>
+			<message onPrepare="[PartyFarm]: The event will start in 5 minutes Prepare your party!"/>
+			<message onPrepare="[PartyFarm]: Registration open! Use .register partyfarm to participate."/>
+			
+			<message onStart="[PartyFarm]: The event has begun! The monsters have been summoned!"/>
+			<message onStart="[PartyFarm]: The event ends in 55 minutes."/>
+			
+			<message onEnd="[PartyFarm]: The event has ended. Thank you for participating!"/>
+		</messages>
+
+
+        <!-- Lista de spawns que serão invocados na zona durante o evento.
+             Cada spawn define o npcId, a quantidade e as coordenadas (x, y, z). -->
+        <spawns>
+            <!-- 5 monstros do npcId 1186 serão invocados nessas coordenadas -->
+            <spawn npcId="20432" count="35" x="-82408" y="246784" z="-3644" respawnDelay="0" />
+
+            <!-- 3 monstros do npcId 1186 serão invocados nessas coordenadas -->
+            <spawn npcId="20432" count="20" x="-82762" y="247279" z="-3573" respawnDelay="0" />
+        </spawns>
+        
+		<players>
+			<player key="need_party">You need to be in a party to register for Party Farm.</player>
+			<player key="need_leader">Only the party leader can register the group for Party Farm.</player>
+			<player key="not_enough_members">Your party must have at least %members% members to register for Party Farm.</player>
+			<player key="not_enough_level">All party members must be at least level %level% to register for Party Farm.</player>
+			<player key="already_registered">Your party is already registered for Party Farm.</player>
+			<player key="registered_success">Your party has been registered for the Party Farm event.</player>
+			<player key="teleport_success">Teleported to Party Farm event.</player>
+			<player key="cannot_teleport_members">Your party doesn't meet the minimum member requirement %members% to teleport.</player>
+			<player key="solo_not_enough_level">Your player does not meet the minimum level %level% requirement to register to Party Farm.</player>
+			<player key="solo_already_registered">Your player is already registered for Party Farm.</player>
+			<player key="solo_registered_success">Your player has been registered for the Party Farm event.</player>
+			
+			<player key="zone_already_represented">You are already represented by another character in this zone!</player>
+			<player key="zone_insufficient_members">You need at least %members% members in your party to enter this zone.</player>
+			
+			<player key="enter_live_with_time">Party Farm is live! Started at %start%h. Remaining time: %minutes% minute(s).</player>
+			<player key="enter_live_no_time">Party Farm is live! Started at %start%h.</player>
+			<player key="enter_register_open">Registration is now OPEN! Use .register to join the partyfarm. Type .unregister to leave.</player>
+
+			<player key="countdown">Time remaining:</player>			
+		</players>
+		
+        <teleports>
+    		<teleport x="-82762" y="247279" z="-3573" />
+    		<teleport x="-82408" y="246784" z="-3644" />
+		</teleports>
+    </event>
+</partyfarm>

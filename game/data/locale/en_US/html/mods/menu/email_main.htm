@@ -1,0 +1,50 @@
+<html><title>Email System</title>
+  <body>
+    <center>
+      <table width=300>
+        <tr><td align=center><font color="LEVEL">Sistema de Email</font></td></tr>
+      </table>
+      
+      <br>
+	  %playerinfo%
+	  
+      <table width=300>
+        <tr>
+          <td>Itens para Enviar:</td>
+          <td><button value="Selecionar" action="bypass -h voiced_email select_items 1" width=75 height=15 back=sek.cbui94 fore=sek.cbui92></td>
+        </tr>
+        <tr>
+          <td>Email Pago?</td>
+          <td>
+            <combobox width=120 var="paymenttype" list="nao;sim">
+          </td>
+        </tr>
+		<tr>
+		     <td>Tempo do Email:</td>
+		     <td>
+		       <combobox width=120 var="duration" list="5minutos;30minutos;2horas">
+		     </td>
+		 </tr>
+		<tr>
+		  <td>Tipo de Pagamento:</td>
+		  <td>
+		    <combobox width=120 var="itemname" list="nenhum;adena;goldbar;ticketdonate">
+		  </td>
+		</tr>
+		<tr>
+		  <td>Qtd Pagamento:</td>
+		  <td>
+			<edit var="amount" width=80 type=number>
+		  </td>
+		</tr>
+
+      </table>
+
+      <br>
+      <button value="Enviar Email" action="bypass -h voiced_email send %targetName% $paymenttype $itemname $amount $duration" width=75 height=21 back=L2UI_CH3.Btn1_normalOn fore=L2UI_CH3.Btn1_normal>
+
+      <br><br>
+      <button value="Fechar" action="bypass -h voiced_email close" width=75 height=15 back=sek.cbui94 fore=sek.cbui92>
+    </center>
+  </body>
+</html>

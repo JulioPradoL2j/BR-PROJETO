@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	
+	<quest id="1" repeatable="false">
+		<info>
+			<name>Primeira Caçada</name>
+			<desc>
+				<line>Mate 3 Gremlini nessa quest.</line>
+				<line>newbie village</line>
+			</desc>
+			<icon>icon.etc_leash_i00</icon>
+			<sound>tutorial_start</sound>
+		</info>
+		
+		<requirements>
+			<classIds>
+				<class id="0"/>
+				<class id="10"/>
+				<class id="18"/>
+				<class id="25"/>
+				<class id="31"/>
+				<class id="38"/>
+				<class id="44"/>
+				<class id="49"/>
+				<class id="53"/>
+			</classIds>
+		</requirements>
+	
+		<objectives>
+            <objective classId="0">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="10">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="18">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="25">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="31">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="38">
+                <kill npcId="18342" count="3"/>
+            </objective>
+             <objective classId="44">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="49">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="53">
+                <kill npcId="18342" count="3"/>
+            </objective>
+		</objectives>	
+		
+		<rewards>
+			<reward classId="0" itemId="1835" count="100"/>
+			<reward classId="0" itemId="57" count="10000"/>
+			<reward classId="10" itemId="3947" count="100"/>
+			<reward classId="10" itemId="57" count="10000"/>
+			<reward classId="18" itemId="1835" count="100"/>
+			<reward classId="18" itemId="57" count="10000"/>
+			<reward classId="25" itemId="3947" count="100"/>
+			<reward classId="25" itemId="57" count="10000"/>
+			<reward classId="31" itemId="1835" count="100"/>
+			<reward classId="31" itemId="57" count="10000"/>
+			<reward classId="38" itemId="3947" count="100"/>
+			<reward classId="38" itemId="57" count="10000"/>
+			<reward classId="44" itemId="1835" count="100"/>
+			<reward classId="44" itemId="57" count="10000"/>
+			<reward classId="49" itemId="3947" count="100"/>
+			<reward classId="49" itemId="57" count="10000"/>
+			<reward classId="53" itemId="1835" count="100"/>
+			<reward classId="53" itemId="57" count="10000"/>
+		</rewards>
+	</quest>
+	
+	<quest id="2" repeatable="false">
+		<info>
+			<name>Segunda Caçada</name>
+			<desc>
+				<line>Mate 3 Gremlini nessa quest.</line>
+				<line>newbie village</line>
+			</desc>
+			<icon>icon.etc_leash_i00</icon>
+			<sound>tutorial_start</sound>
+		</info>
+		
+		<requirements>
+			<classIds>
+				<class id="0"/>
+				<class id="10"/>
+				<class id="18"/>
+				<class id="25"/>
+				<class id="31"/>
+				<class id="38"/>
+				<class id="44"/>
+				<class id="49"/>
+				<class id="53"/>
+			</classIds>
+		</requirements>
+		
+		<objectives>
+            <objective classId="0">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="10">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="18">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="25">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="31">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="38">
+                <kill npcId="18342" count="3"/>
+            </objective>
+             <objective classId="44">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="49">
+                <kill npcId="18342" count="3"/>
+            </objective>
+            <objective classId="53">
+                <kill npcId="18342" count="3"/>
+            </objective>
+		</objectives>	
+
+		<rewards>
+			<reward classId="0" itemId="1835" count="100"/>
+			<reward classId="0" itemId="57" count="10000"/>
+			<reward classId="10" itemId="3947" count="100"/>
+			<reward classId="10" itemId="57" count="10000"/>
+			<reward classId="18" itemId="1835" count="100"/>
+			<reward classId="18" itemId="57" count="10000"/>
+			<reward classId="25" itemId="3947" count="100"/>
+			<reward classId="25" itemId="57" count="10000"/>
+			<reward classId="31" itemId="1835" count="100"/>
+			<reward classId="31" itemId="57" count="10000"/>
+			<reward classId="38" itemId="3947" count="100"/>
+			<reward classId="38" itemId="57" count="10000"/>
+			<reward classId="44" itemId="1835" count="100"/>
+			<reward classId="44" itemId="57" count="10000"/>
+			<reward classId="49" itemId="3947" count="100"/>
+			<reward classId="49" itemId="57" count="10000"/>
+			<reward classId="53" itemId="1835" count="100"/>
+			<reward classId="53" itemId="57" count="10000"/>
+		</rewards>
+	</quest>
+
+</quests>

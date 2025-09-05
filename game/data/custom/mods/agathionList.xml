@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+    <items id="12000">
+        <agathion NpcId="20100" runSpeed="true" 
+                  healAmount="500" healDelay="10" 
+                  randomAnimDelay="45" followDelay="2" />
+    </items>
+    <items id="12001">
+        <agathion NpcId="20101" runSpeed="true"
+                  healAmount="1000" healDelay="20"
+                  randomAnimDelay="30" followDelay="3" />
+    </items>
+    <items id="12002">
+        <agathion NpcId="20102" runSpeed="false"
+                  healAmount="250" healDelay="5"
+                  randomAnimDelay="60" followDelay="1" />
+    </items>
+</list>
+
